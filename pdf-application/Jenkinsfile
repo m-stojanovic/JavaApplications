@@ -1,0 +1,18 @@
+node {
+        stage('checkout') {
+            git 'https://github.com/m-stojanovic/maven-applications.git'
+        }
+
+    dir('pdf-application') {
+        
+        stage('compiling') {
+            sh label: '', script: 'mvn clean package -DskipTests'
+        }
+        
+        stage('archival') {
+            step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: '/var/lib/jenkins/workspace/pdf-service-pipeline/pdf-application/target/generated-test-sources'])
+            archiveArtifacts 'target/pdf-generator-0.0.1-SNAPSHOT.jar'
+        }   
+    }
+    
+}
