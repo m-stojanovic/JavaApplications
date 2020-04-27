@@ -1,5 +1,5 @@
 Compile a project:
-1. git clone git@github.com:milosstojanovic2318s/maven-applications.git
+1. git clone "git@github.com:milosstojanovic2318s/maven-applications.git"
 2. cd pdf-application/
 3. mvn compile
 
