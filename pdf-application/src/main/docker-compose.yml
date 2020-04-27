@@ -1,0 +1,15 @@
+version: '2.2'
+services:
+  spring:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: pdf-spring-boot
+    volumes:
+        - ./resources:/opt/pdf-app/resources
+    ports:
+      - 8080:8080
+    networks:
+      - network1
+networks:
+  network1:
