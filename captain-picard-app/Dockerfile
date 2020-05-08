@@ -14,7 +14,7 @@
 # test again that it works at http://localhost
 
 
-# Instructions from the app developer
+# Instructions:
 # - you should use the 'node' official image, with the alpine 6.x branch
 # - this app listens on port 3000, but the container should launch on port 80
   #  so it will respond to http://localhost:80 on your computer
@@ -42,12 +42,3 @@ RUN npm install && npm cache clean
 COPY . .
 
 CMD ["tini", "--", "node", "./bin/www"]
-
-# Bonus Extra Credit
-# this will not have you setting up a complete image useful for local development, test, and prod
-# it's just meant to get you started with basic Dockerfile concepts and not focus too much on
-# proper Node.js use in a container. **If you happen to be a Node.js Developer**, then 
-# after you get through more of this course, you should come back and use my 
-# Node Docker Good Defaults sample project on GitHub to change this Dockerfile for 
-# better local development with more advanced topics
-# https://github.com/BretFisher/node-docker-good-defaults
