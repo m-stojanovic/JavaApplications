@@ -1,2 +1,1 @@
-# maven-applications
-Repository for applications 
+# Repository for varios applications 
