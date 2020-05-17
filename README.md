@@ -1,2 +1,2 @@
 # maven-applications
-Repository for java applications 
+Repository for applications 
